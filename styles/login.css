@@ -17,6 +17,13 @@ body{
   margin: 50px;
 }
 
+.back{
+  color: white;
+  align-self: flex-end;
+  
+  
+}
+
 h1 {
   margin: 20px;
   padding: 10px;
