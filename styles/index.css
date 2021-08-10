@@ -1,0 +1,51 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 50px;
+}
+
+h1 {
+  margin: 20px;
+}
+img {
+  height: 50vh;
+}
+
+.main {
+}
+
+h2 {
+  margin: 20px;
+}
+
+.description {
+  margin: 20px;
+  font-style: italic;
+}
+
+.buttons {
+  margin: 20px;
+}
+
+.reg {
+  margin: 20px;
+  padding: 10px;
+}
+
+.log {
+  margin: 20px;
+  padding: 10px;
+}
+
+/* light  #88D1D7 */
+
+/* dark #39B4BC */
