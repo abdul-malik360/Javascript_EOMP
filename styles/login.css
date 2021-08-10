@@ -5,6 +5,10 @@
   font-family: sans-serif;
 }
 
+body{
+  background: linear-gradient(to right, #000428, #004e92);
+}
+
 .container {
   display: flex;
   flex-direction: column;
@@ -15,10 +19,16 @@
 
 h1 {
   margin: 20px;
+  padding: 10px;
+  border-radius: 50px;
+  color: white;
+  /* background-color: #000046; */
+  background: linear-gradient(to right, #39B4BC, #88D1D7);
 }
 
 h2 {
   margin: 20px;
+  color: white;
 }
 
 .form {
@@ -36,6 +46,7 @@ h2 {
 
 h3 {
   margin: 10px;
+  color: #88D1D7;
 }
 
 .input {
@@ -45,4 +56,23 @@ h3 {
 
 .logbtn {
   margin: 20px;
+
+  padding: 10px;
+  color: #88D1D7;
+  background-color: #39B4BC;
+  border-radius: 50px;
+  text-decoration: none;
+
+  transition: 0.6s;
+
+  cursor: pointer;
+}
+.logbtn:hover{
+  color: white;
+}
+
+.link{
+  text-decoration: none;
+  color: #39B4BC;
+  
 }
