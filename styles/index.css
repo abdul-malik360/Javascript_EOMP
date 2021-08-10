@@ -18,6 +18,10 @@ body{
 
 h1 {
   margin: 20px;
+  padding: 10px;
+  border-radius: 50px;
+  color: white;
+  background-color: #1cb5e0;
 }
 img {
   height: 50vh;
@@ -28,25 +32,36 @@ img {
 
 h2 {
   margin: 20px;
+  color: #000046;
 }
 
 .description {
   margin: 20px;
   font-style: italic;
+  color: white;
 }
 
 .buttons {
   margin: 20px;
+  
 }
 
 .reg {
   margin: 20px;
   padding: 10px;
+  color: #39B4BC;
+  background-color: #88D1D7;
+  border-radius: 50px;
+  text-decoration: none;
 }
 
 .log {
   margin: 20px;
   padding: 10px;
+  color: #88D1D7;
+  background-color: #39B4BC;
+  border-radius: 50px;
+  text-decoration: none;
 }
 
 /* light  #88D1D7 */
