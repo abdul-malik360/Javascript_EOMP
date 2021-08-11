@@ -21,21 +21,75 @@
         <h2>Begin your Journey</h2>
       </div>
 
-      <form class="form" action="#" method="POST">
+      <form
+        class="form"
+        action="https://abdul-malik-api.herokuapp.com/api/register/"
+        method="POST"
+      >
         <div class="form_content">
           <h3>Register</h3>
-          <input id="id_numb" class="input" type="text" placeholder="ID Number" />
-          <input id="name" class="input" type="text" placeholder="Name" />
-          <input id="surname" class="input" type="text" placeholder="Surname" />
-          <input id="email" class="input" type="text" placeholder="Email Adrress" />
-          <input id="cell" class="input" type="text" placeholder="Cell Number" />
-          <input id="address" class="input" type="text" placeholder="Home Address" />
-          <input id="username" class="input" type="text" placeholder="Username" />
-          <input id="password" class="input" type="text" placeholder="Password" />
+          <input
+            name="ID_Number"
+            id="id_numb"
+            class="input"
+            type="text"
+            placeholder="ID Number"
+          />
+          <input
+            name="Name"
+            id="name"
+            class="input"
+            type="text"
+            placeholder="Name"
+          />
+          <input
+            name="Surname"
+            id="surname"
+            class="input"
+            type="text"
+            placeholder="Surname"
+          />
+          <input
+            name="Email"
+            id="email"
+            class="input"
+            type="text"
+            placeholder="Email Adrress"
+          />
+          <input
+            name="Cell"
+            id="cell"
+            class="input"
+            type="text"
+            placeholder="Cell Number"
+          />
+          <input
+            name="Address"
+            id="address"
+            class="input"
+            type="text"
+            placeholder="Home Address"
+          />
+          <input
+            name="Username"
+            id="username"
+            class="input"
+            type="text"
+            placeholder="Username"
+          />
+          <input
+            name="Password"
+            id="password"
+            class="input"
+            type="text"
+            placeholder="Password"
+          />
           <button class="regbtn" type="submit">Register</button>
         </div>
       </form>
-      <p class="link_text">Already registered? <a class="link" href="/login.html">Login</a></p>
+      <p class="link_text">
+        Already registered? <a class="link" href="/login.html">Login</a>
+      </p>
     </div>
     <script src="/scripts/register.js"></script>
   </body>
