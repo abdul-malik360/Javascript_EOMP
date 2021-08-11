@@ -34,6 +34,7 @@
             class="input"
             type="text"
             placeholder="username"
+            required
           />
           <input
             name="Password"
@@ -41,8 +42,13 @@
             class="input"
             type="text"
             placeholder="password"
+            required
           />
-          <button onclick="event.preventDefault(), login()" class="logbtn">
+          <button
+            type="submit"
+            onclick="event.preventDefault(), login()"
+            class="logbtn"
+          >
             Login
           </button>
         </div>
