@@ -21,22 +21,30 @@
         <h2>Welcome Back</h2>
       </div>
 
-      <form class="form" action="#" method="POST">
+      <form
+        class="form"
+        action="https://abdul-malik-api.herokuapp.com/auth"
+        method="POST"
+      >
         <div class="form_content">
           <h3>Log In</h3>
           <input
+            name="Username"
             id="username"
             class="input"
             type="text"
             placeholder="username"
           />
           <input
+            name="Password"
             id="password"
             class="input"
             type="text"
             placeholder="password"
           />
-          <button class="logbtn" type="submit">Login</button>
+          <button onclick="event.preventDefault(), login()" class="logbtn">
+            Login
+          </button>
         </div>
       </form>
       <a class="link" href="/recovery.html">Forgot your password?</a>
