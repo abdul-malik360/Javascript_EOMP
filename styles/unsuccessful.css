@@ -1,0 +1,46 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+body {
+  background: linear-gradient(to right, #e43a15, #e65245);
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 50px;
+}
+
+h1 {
+  margin: 20px;
+  color: white;
+}
+
+h2 {
+  margin: 20px;
+  font-style: italic;
+  color: #1cb5e0;
+}
+
+.regbtn {
+  margin: 20px;
+
+  padding: 10px;
+  color: #88d1d7;
+  background-color: #39b4bc;
+  border-radius: 50px;
+  text-decoration: none;
+
+  transition: 0.6s;
+
+  cursor: pointer;
+}
+.regbtn:hover {
+  color: white;
+}
