@@ -5,7 +5,7 @@
   font-family: sans-serif;
 }
 
-body{
+body {
   background: linear-gradient(to right, #2c3e50, #3498db);
 }
 
@@ -17,7 +17,7 @@ body{
   margin: 50px;
 }
 
-.back{
+.back {
   color: white;
   align-self: flex-end;
 }
@@ -28,7 +28,7 @@ h1 {
   padding-left: 30px;
   border-radius: 50px;
   color: white;
-  background: linear-gradient(to right, #39B4BC, #88D1D7);
+  background: linear-gradient(to right, #39b4bc, #88d1d7);
 }
 
 h2 {
@@ -51,7 +51,7 @@ h2 {
 
 h3 {
   margin: 10px;
-  color: #39B4BC;
+  color: #39b4bc;
 }
 
 .input {
@@ -59,12 +59,20 @@ h3 {
   padding: 10px;
 }
 
+.passbox {
+  display: flex;
+  flex-direction: row;
+}
+.tick {
+  align-self: center;
+}
+
 .regbtn {
   margin: 20px;
 
   padding: 10px;
-  color:#39B4BC;
-  background-color: #88D1D7;
+  color: #39b4bc;
+  background-color: #88d1d7;
   border-radius: 50px;
   text-decoration: none;
 
@@ -72,16 +80,15 @@ h3 {
 
   cursor: pointer;
 }
-.regbtn:hover{
+.regbtn:hover {
   color: white;
 }
 
-.link_text{
+.link_text {
   color: white;
 }
 
-.link{
+.link {
   text-decoration: none;
-  color: #88D1D7;
-  
+  color: #88d1d7;
 }
