@@ -36,14 +36,17 @@
             placeholder="username"
             required
           />
-          <input
-            name="Password"
-            id="password"
-            class="input"
-            type="text"
-            placeholder="password"
-            required
-          />
+          <div>
+            <input
+              name="Password"
+              id="password"
+              class="input"
+              type="password"
+              placeholder="password"
+              required
+            />
+            <input type="checkbox" onclick="show_password()" />
+          </div>
           <button
             type="submit"
             onclick="event.preventDefault(), login()"
