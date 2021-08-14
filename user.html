@@ -18,16 +18,19 @@
     <nav class="navbar">
       <ul class="navbar-links">
         <li class="navbar-link">
-          <a href="#" class="navbar-anchor">View Profile</a>
+          <div class="navbar-anchor" onclick="toggleModal('profile-modal')">View Profile</div>
         </li>
         <li class="navbar-link">
-          <a href="#" class="navbar-anchor">Add Product</a>
+          <div class="navbar-anchor" onclick="toggleModal('add-modal')">Add Product</div>
         </li>
         <li class="navbar-link">
-          <a href="#" class="navbar-anchor">Edit Product</a>
+          <div class="navbar-anchor" onclick="toggleModal('add-modal')">Edit Product</div>
         </li>
         <li class="navbar-link">
-          <a href="#" class="navbar-anchor">Delete Product</a>
+          <div class="navbar-anchor" onclick="toggleModal('add-modal')">Delete Product</div>
+        </li>
+        <li class="navbar-link">
+          <a href="/login.html" class="navbar-anchor">Log Out</a>
         </li>
       </ul>
       <button class="navbar-button" onclick="toggleNavbar()">
@@ -36,9 +39,16 @@
     </nav>
 
     <div class="container">
-      <h1 class="heading">Everything Pizza</h1>
+      <h1 class="heading">Your Products</h1>
       <div class="show_products"></div>
+      <!-- <button onclick="toggleModal('profile-modal')"><span class="modalbtn">X</span></button>  -->
+      <div id="profile-modal" class="modal"></div>
+      <div id="add-modal" class="modal"></div>
+      <div id="edit-modal" class="modal"></div>
+      <div id="delete-modal" class="modal"></div>
     </div>
+
+    <script src="/scripts/modal.js"></script>
     <script src="/scripts/show_products.js"></script>
     <script src="/scripts/navbar.js"></script>
     <script src="/scripts/user.js"></script>

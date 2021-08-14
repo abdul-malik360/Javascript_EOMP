@@ -59,6 +59,7 @@
   font-size: 15px;
   transition: 0.6s;
   padding: 1px 1px;
+  cursor: pointer;
 }
 .navbar-anchor:hover {
   color: #1cb5e0;
