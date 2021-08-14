@@ -25,10 +25,10 @@
           <div class="navbar-anchor" onclick="toggleModal('add-modal')">Add Product</div>
         </li>
         <li class="navbar-link">
-          <div class="navbar-anchor" onclick="toggleModal('add-modal')">Edit Product</div>
+          <div class="navbar-anchor" onclick="toggleModal('edit-modal')">Edit Product</div>
         </li>
         <li class="navbar-link">
-          <div class="navbar-anchor" onclick="toggleModal('add-modal')">Delete Product</div>
+          <div class="navbar-anchor" onclick="toggleModal('delete-modal')">Delete Product</div>
         </li>
         <li class="navbar-link">
           <a href="/login.html" class="navbar-anchor">Log Out</a>
@@ -42,12 +42,12 @@
     <div class="container">
       <h1 class="heading">Your Products</h1>
       <div class="show_products"></div>
-      <!-- <button onclick="toggleModal('profile-modal')"><span class="modalbtn">X</span></button>  -->
+      
       <div id="profile-modal" class="modal"></div>
       <div id="add-modal" class="modal">
         <form class="form" action="https://abdul-malik-api.herokuapp.com/api/add-product/" method="post">
         <div class="form_content">
-          <h3 class="form_heading">Add Products</h3>
+          <h3 class="form_heading">Add Products</h3> <button onclick="toggleModal('add-modal')" class="modalbtn">X</button>
           <input
             name="Name"
             id="name"
@@ -95,14 +95,6 @@
             type="text"
             placeholder="Product Quantity"
             required
-          />
-          <input
-            name="Total"
-            id="total"
-            class="input"
-            type="text"
-            placeholder="total"
-            
           />
           
           <button class="addbtn" type="submit">Add Product</button>

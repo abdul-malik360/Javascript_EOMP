@@ -40,3 +40,17 @@
   .addbtn:hover {
     color: white;
   }
+
+  .modalbtn {
+    position: fixed;
+    top: 25px;
+    right: 25px;
+    z-index: 100;
+    font-size: 40px;
+  
+    color: white;
+    background-color: transparent;
+    cursor: pointer;
+    outline: none;
+    border: transparent;
+  }
