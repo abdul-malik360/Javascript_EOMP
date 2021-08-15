@@ -1,5 +1,8 @@
 let prod_url = "https://abdul-malik-api.herokuapp.com/api/show-products/";
 
+let products = []
+let plate = []
+
 function showProducts(url) {
   fetch(url)
     .then((response) => response.json())
@@ -19,9 +22,21 @@ function showProducts(url) {
         <h2 class="type">${product.Type}</h2>
         <p class="description" >${product.Description}</p>
         <h3 class="price">${product.Price}</h3>
+        <button onclick="addToPlate(${product.prod_list})">Add to Plate</button>
         </div>`;
       });
     });
 }
 
 showProducts(prod_url);
+
+
+function addToPlate(prod_list){
+  let product = products.find(item => {
+    return item.prod_list == prod_list
+  })
+  console.log(product)
+  plate.push(product);
+  console.log(plate);
+}
+
