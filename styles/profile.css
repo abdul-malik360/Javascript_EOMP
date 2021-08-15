@@ -1,0 +1,19 @@
+.user_container{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    background-color: gray;
+    margin: 50px;
+}
+
+.pspan{
+    color: white;
+    font-style: italic;
+}
+
+.details{
+    color: #000046;
+    margin: 20px;
+    
+}
