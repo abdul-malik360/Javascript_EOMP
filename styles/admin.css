@@ -42,9 +42,9 @@ body {
 .modal.active {
   display: flex;
   position: fixed;
-  
+
   left: 50;
-  
+
   bottom: 0;
 }
 
@@ -64,8 +64,6 @@ body {
   transition: 0.3s;
 }
 
-.modalbtn:hover{
+.modalbtn:hover {
   background-color: red;
 }
-
-

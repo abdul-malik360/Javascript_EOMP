@@ -26,6 +26,7 @@
   font-family: sans-serif;
   transition: all 0.6s linear;
   z-index: 100;
+  margin: 20px;
 }
 .navbar-links.active {
   z-index: 100;

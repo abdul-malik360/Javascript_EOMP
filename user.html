@@ -6,10 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>User</title>
     <link rel="stylesheet" href="/styles/show_products.css" />
-    <link rel="stylesheet" href="/styles/user.css" />
+    <link rel="stylesheet" href="/styles/admin.css" />
     <link rel="stylesheet" href="/styles/navbar.css" />
-    <link rel="stylesheet" href="/styles/add_product.css">
-    <link rel="stylesheet" href="/styles/profile.css">
+    <link rel="stylesheet" href="/styles/add_product.css" />
+    <link rel="stylesheet" href="/styles/profile.css" />
 
     <script
       src="https://kit.fontawesome.com/ab6051d3ab.js"
@@ -20,17 +20,16 @@
     <nav class="navbar">
       <ul class="navbar-links">
         <li class="navbar-link">
-          <div class="navbar-anchor" onclick="toggleModal('profile-modal')">View Profile</div>
+          <div class="navbar-anchor" onclick="toggleModal('profile-modal')">
+            View Profile
+          </div>
         </li>
         <li class="navbar-link">
-          <div class="navbar-anchor" onclick="toggleModal('add-modal')">Add Product</div>
+          <div class="navbar-anchor" onclick="toggleModal('plate-modal')">
+            What's in your Plate?
+          </div>
         </li>
-        <li class="navbar-link">
-          <div class="navbar-anchor" onclick="toggleModal('edit-modal')">Edit Product</div>
-        </li>
-        <li class="navbar-link">
-          <div class="navbar-anchor" onclick="toggleModal('delete-modal')">Delete Product</div>
-        </li>
+
         <li class="navbar-link">
           <a href="/login.html" class="navbar-anchor">Log Out</a>
         </li>
@@ -41,146 +40,26 @@
     </nav>
 
     <div class="container">
-      <h1 class="heading">Your Products</h1>
+      <h1 class="heading">Today's Menu</h1>
       <div class="show_products"></div>
-      
+
       <div id="profile-modal" class="modal">
         <div class="show_user">
-          <button onclick="toggleModal('profile-modal')" class="modalbtn">X</button>
-        </div> 
-      </div>
-      <div id="add-modal" class="modal">
-        <form class="form" action="https://abdul-malik-api.herokuapp.com/api/add-product/" method="post">
-        <div class="form_content">
-          <h3 class="form_heading">Add Products</h3> <button onclick="toggleModal('add-modal')" class="modalbtn">X</button>
-          <input
-            name="Name"
-            id="name"
-            class="input"
-            type="text"
-            placeholder="Product Name"
-            required
-          />
-          <input
-            name="Picture"
-            id="picture"
-            class="input"
-            type="text"
-            placeholder="Product Picture"
-            required
-          />
-          <input
-            name="Type"
-            id="type"
-            class="input"
-            type="text"
-            placeholder="Product Type"
-            required
-          />
-          <input
-            name="Description"
-            id="decscription"
-            class="input"
-            type="text"
-            placeholder="Product Description"
-            required
-          />
-          <input
-            name="Price"
-            id="price"
-            class="input"
-            type="text"
-            placeholder="Product Price"
-            required
-          />
-          <input
-            name="Quantity"
-            id="quantity"
-            class="input"
-            type="text"
-            placeholder="Product Quantity"
-            required
-          />
-          
-          <button class="addbtn" type="submit">Add Product</button>
+          <button onclick="toggleModal('profile-modal')" class="modalbtn">
+            X
+          </button>
         </div>
-        
-        </form>
       </div>
-      <div id="edit-modal" class="modal">
 
-        <form class="form" action="https://abdul-malik-api.herokuapp.com/edit-product/6" method="PUT">
-          <div class="form_content">
-            <h3 class="form_heading">Edit Product</h3> <button onclick="toggleModal('edit-modal')" class="modalbtn">X</button>
-            <!-- <input
-              name="prod_list"
-              id="prod_list"
-              class="input"
-              type="text"
-              placeholder="Product Number"
-              required
-            /> -->
-            <input
-              name="Name"
-              id="name"
-              class="input"
-              type="text"
-              placeholder="Product Name"
-              required
-            />
-            <input
-              name="Picture"
-              id="picture"
-              class="input"
-              type="text"
-              placeholder="Product Picture"
-              required
-            />
-            <input
-              name="Type"
-              id="type"
-              class="input"
-              type="text"
-              placeholder="Product Type"
-              required
-            />
-            <input
-              name="Description"
-              id="decscription"
-              class="input"
-              type="text"
-              placeholder="Product Description"
-              required
-            />
-            <input
-              name="Price"
-              id="price"
-              class="input"
-              type="text"
-              placeholder="Product Price"
-              required
-            />
-            <input
-              name="Quantity"
-              id="quantity"
-              class="input"
-              type="text"
-              placeholder="Product Quantity"
-              required
-            />
-            
-            <button class="addbtn" type="submit">Edit Product</button>
-          </div>
-          
-          </form>
-
+      <div id="plate-modal" class="modal">
+        <button onclick="toggleModal('plate-modal')" class="modalbtn">X</button>
       </div>
-      <div id="delete-modal" class="modal"></div>
     </div>
 
     <script src="/scripts/modal.js"></script>
     <script src="/scripts/show_products.js"></script>
     <script src="/scripts/navbar.js"></script>
     <script src="/scripts/show_user.js"></script>
+    <script src="/scripts/plate.js"></script>
   </body>
 </html>
