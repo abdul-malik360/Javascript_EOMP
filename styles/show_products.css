@@ -9,35 +9,54 @@
 .prod_container {
   margin: 30px;
   padding: 30px;
-  border: black 2px solid;
+  border: #1cb5e0 2px solid;
   width: 30%;
   height: 100%;
-  background-color: wheat;
+  background: linear-gradient(to right, #0575e6, #021b79);
 }
 
 .pic {
-  display: flex;
-  justify-content: center;
-  align-self: center;
+  object-fit: contain;
 }
 
+.name {
+  margin: 10px;
+}
 .prod_numb {
-  color: white;
+  color: #000046;
 }
 .name {
-  color: blueviolet;
+  color: #000046;
 }
 
 .type {
-  color: aqua;
+  color: #1cb5e0;
+  margin: 10px;
 }
 
 .description {
   margin: 10px;
   text-align: justify;
   font-style: italic;
+  color: white;
 }
 
 .price {
   font-weight: bold;
+  margin: 10px;
+}
+
+.platebtn {
+  color: #000046;
+  background-color: #1cb5e0;
+  transition: 0.3s;
+  margin: 10px;
+  padding: 5px;
+  cursor: pointer;
+  border: transparent;
+}
+.platebtn:hover {
+  color: white;
+  transition: 0.1s;
+  background-color: #000046;
 }
