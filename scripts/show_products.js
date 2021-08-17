@@ -22,7 +22,7 @@ function showProducts(url) {
         <h2 class="type">${product.Type}</h2>
         <p class="description" >${product.Description}</p>
         <h3 class="price">R ${product.Price}</h3>
-        <button class="platebtn" onclick="addToPlate(${product.prod_list})">Add to Plate <i class="fas fa-utensils"></i></button>
+        <button class="platebtn" onclick="getProduct(${product.prod_list})">Add to Plate <i class="fas fa-utensils"></i></button>
         </div>`;
       });
     });
@@ -30,11 +30,39 @@ function showProducts(url) {
 
 showProducts(prod_url);
 
-function addToPlate(prod_list) {
-  let product = products.find((item) => {
-    return item.prod_list == prod_list;
-  });
-  console.log(product);
-  plate.push(product);
-  console.log(plate);
+function getProduct(id) {
+  fetch(`https://abdul-malik-api.herokuapp.com/api/view-product/${id}`, {
+    method: "GET",
+    body: JSON.stringify(),
+    headers: {
+      "content-type": "application/json",
+    },
+  })
+    .then((res) => res.json())
+    .then((product) => {
+      console.log(product);
+      let name = `${product.Name}`;
+      let picture = `${product.Picture}`;
+      let type = `${product.Type}`;
+      let description = `${product.Description}`;
+      let price = `${product.Price}`;
+      console.log(name);
+      addToPlate(name, picture, type, description, price);
+    });
+}
+
+function addToPlate(name, picture, type, description, price) {
+  let platediv = document.createElement("div");
+  platediv.classList.add("modal_plate");
+  let plateItems = document.getElementsByClassName("plate_items")[0];
+  let plateItemName = plateItems.getElementsByClassName("plate_item_name");
+  for (let i = 0; i < plateItemName.length; i++) {
+    if (plateItemName[i].innerText == name) {
+      alert("You already added to your plate");
+      return;
+    }
+  }
+  let PlateContent = `<div> ${name} <img src="${picture}"> ${type} ${description} R ${price} </div>`;
+  platediv.innerHTML = PlateContent;
+  plateItems.append(platediv);
 }
