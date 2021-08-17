@@ -22,7 +22,7 @@ function showProducts(url) {
         <h2 class="type">${product.Type}</h2>
         <p class="description" >${product.Description}</p>
         <h3 class="price">R ${product.Price}</h3>
-        <button class="platebtn" onclick="addToPlate(${product.prod_list})">Add to Plate</button>
+        <button class="platebtn" onclick="addToPlate(${product.prod_list})">Add to Plate <i class="fas fa-utensils"></i></button>
         </div>`;
       });
     });

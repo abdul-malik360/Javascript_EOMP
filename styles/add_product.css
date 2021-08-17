@@ -1,44 +1,44 @@
 .form {
-    display: flex;
-    justify-content: center;
-    align-self: center;
-    margin: 20px;
-    display: flex;  
-    width: 50%;
-  }
-  
-  .form_content {
-    display: flex;
-    flex-direction: column;
-    
-  }
-  
-  h3 {
-    margin: 10px;
-    color: #000046  ;
-  }
-  
-  .input {
-    margin: 5px;
-    padding: 10px;
-  }
-  
+  display: flex;
+  justify-content: center;
+  align-self: center;
+  margin: 20px;
+  display: flex;
+  width: 50%;
+}
 
-  .addbtn {
-    margin: 20px;
-  
-    padding: 10px;
-    color: #000046;
-    background-color: #1cb5e0;
-    border-radius: 50px;
-    text-decoration: none;
-  
-    transition: 0.6s;
-  
-    cursor: pointer;
-  }
-  .addbtn:hover {
-    color: white;
-  }
+.form_content {
+  display: flex;
+  flex-direction: column;
+}
 
-  
+h3 {
+  margin: 10px;
+  color: #000046;
+}
+
+.input {
+  margin: 5px;
+  padding: 10px;
+}
+
+.addbtn {
+  margin: 20px;
+
+  padding: 10px;
+  color: #000046;
+  background-color: #1cb5e0;
+  border-radius: 50px;
+  text-decoration: none;
+
+  transition: 0.6s;
+
+  cursor: pointer;
+}
+.addbtn:hover {
+  color: white;
+}
+
+.convertedimage {
+  display: none;
+}
