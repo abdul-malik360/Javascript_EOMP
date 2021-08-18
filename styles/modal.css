@@ -16,14 +16,7 @@
 
   margin: 2%;
   padding: 1%;
-  scroll-behavior: smooth;
-
-  flex-wrap: wrap;
 }
-
-/* .modal::-webkit-scrollbar {
-  width: 20px;
-} */
 
 .modal.active {
   display: flex;
@@ -54,10 +47,22 @@
   background-color: red;
 }
 
-/* Important part */
-.modal-dialog {
-  overflow-y: initial !important;
+.scrollbar {
+  scroll-behavior: smooth;
+  overflow-y: scroll;
 }
-.modal-body {
-  overflow-y: auto;
+.scrollbar::-webkit-scrollbar {
+  width: 15px;
 }
+.scrollbar::-webkit-scrollbar-thumb {
+  background-color: #000046;
+  border-radius: 50px;
+}
+
+.scrollbar::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+/* .scrollbar::-webkit-scrollbar-thumb {
+  
+} */
