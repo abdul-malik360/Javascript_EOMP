@@ -42,3 +42,20 @@ h3 {
 .convertedimage {
   display: none;
 }
+
+.delbtn {
+  margin: 10px;
+
+  padding: 5px;
+  color: #000046;
+  background-color: #1cb5e0;
+  border-radius: 50px;
+  text-decoration: none;
+
+  transition: 0.6s;
+
+  cursor: pointer;
+}
+.delbtn:hover {
+  color: white;
+}
