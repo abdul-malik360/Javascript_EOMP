@@ -16,7 +16,14 @@
 
   margin: 2%;
   padding: 1%;
+  scroll-behavior: smooth;
+
+  flex-wrap: wrap;
 }
+
+/* .modal::-webkit-scrollbar {
+  width: 20px;
+} */
 
 .modal.active {
   display: flex;
@@ -45,4 +52,12 @@
 
 .modalbtn:hover {
   background-color: red;
+}
+
+/* Important part */
+.modal-dialog {
+  overflow-y: initial !important;
+}
+.modal-body {
+  overflow-y: auto;
 }

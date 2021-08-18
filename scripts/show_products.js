@@ -39,13 +39,13 @@ function getProduct(id) {
     },
   })
     .then((res) => res.json())
-    .then((product) => {
-      console.log(product);
-      let name = `${product.Name}`;
-      let picture = `${product.Picture}`;
-      let type = `${product.Type}`;
-      let description = `${product.Description}`;
-      let price = `${product.Price}`;
+    .then((data) => {
+      console.log(data);
+      let name = `${data.data[1]}`;
+      let picture = `${data.data[2]}`;
+      let type = `${data.data[3]}`;
+      let description = `${data.data[4]}`;
+      let price = `${data.data[5]}`;
       console.log(name);
       addToPlate(name, picture, type, description, price);
     });
