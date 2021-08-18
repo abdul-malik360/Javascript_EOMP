@@ -41,19 +41,20 @@ function getProduct(id) {
     .then((res) => res.json())
     .then((data) => {
       console.log(data);
+      let prod_numb = `${data.data[0]}`;
       let name = `${data.data[1]}`;
       let picture = `${data.data[2]}`;
       let type = `${data.data[3]}`;
       let description = `${data.data[4]}`;
       let price = `${data.data[5]}`;
       console.log(name);
-      addToPlate(name, picture, type, description, price);
+      addToPlate(prod_numb, name, picture, type, description, price);
     });
 }
 
-function addToPlate(name, picture, type, description, price) {
+function addToPlate(prod_numb, name, picture, type, description, price) {
   let platediv = document.createElement("div");
-  platediv.classList.add("modal_plate");
+  platediv.classList.add("modal_plate_items");
   let plateItems = document.getElementsByClassName("plate_items")[0];
   let plateItemName = plateItems.getElementsByClassName("plate_item_name");
   for (let i = 0; i < plateItemName.length; i++) {
@@ -62,7 +63,27 @@ function addToPlate(name, picture, type, description, price) {
       return;
     }
   }
-  let PlateContent = `<div> ${name} <img src="${picture}"> ${type} ${description} R ${price} </div>`;
+  let PlateContent = `<div class="plate_content">
+  <h1 class="name"> <span class="prod_numb">${prod_numb}.</span> ${name}</h1>
+  <img class="pic" src="${picture}" alt="">
+  <h2 class="type">${type}</h2>
+  <p class="description" >${description}</p>
+  <h3 class="price">R ${price}</h3>
+  <button class="rembtn" onclick="removeFromPlate()" >remove from plate </button>
+  </div>`;
   platediv.innerHTML = PlateContent;
   plateItems.append(platediv);
+}
+
+// `<div class="plate_content"> ${prod_numb} ${name} <img src="${picture}"> ${type} ${description} R ${price} <button>remove from plate</button></div>`;
+
+function removeFromPlate() {
+  let removePlate = document.getElementsByClassName("rembtn");
+  for (let i = 0; i < removePlate.length; i++) {
+    let button = removePlate[i];
+    button.addEventListener("click", function (event) {
+      let remBtn = event.target;
+      remBtn.parentElement.parentElement.remove();
+    });
+  }
 }
